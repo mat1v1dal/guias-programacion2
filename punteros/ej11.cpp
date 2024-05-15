@@ -6,5 +6,10 @@ int main(){
     cin>>filas>>columnas;
     int** arreglo;
     arreglo = new int*[filas];
+    for(int i = 0; i<filas; i++){
+        arreglo[i] = new int[columnas];
+    }
+
+    
 
 }
