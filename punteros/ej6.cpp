@@ -4,16 +4,24 @@ using namespace std;
 
 void invertir(char *a){
     char *inicio = a;
+    char aux;
     char *fin = a + strlen(a) - 1;
-    cout<<*inicio<<" "<<*fin;
+    while (inicio < fin) {
+        char temp = *inicio;
+        *inicio = *fin;
+        *fin = temp;
+        inicio++;
+        fin--;
+    }
 }
 
 int main(){
 
-    char a[50];
-    cin.getline(a, 50);
+    char a[51];
+    cin.getline(a, 51);
 
     invertir(a);
+    cout<<a;
 
 
 }
